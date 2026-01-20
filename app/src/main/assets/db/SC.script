@@ -1,0 +1,27 @@
+DROP TABLE allMatches IF EXISTS;
+DROP TABLE allRejects IF EXISTS;
+DROP TABLE allUsers IF EXISTS;
+
+
+
+CREATE SCHEMA AUTHORIZATION DBA
+CREATE TABLE allUsers(userName VARCHAR(50) NOT NULL PRIMARY KEY , password VARCHAR(50) NOT NULL, bio VARCHAR(200) DEFAULT 'Empty' NOT NULL, interest1 VARCHAR(50)  DEFAULT 'Empty' NOT NULL, interest2 VARCHAR(50)  DEFAULT 'Empty' NOT NULL, interest3 VARCHAR(50)  DEFAULT 'Empty' NOT NULL, interest4 VARCHAR(50)  DEFAULT 'Empty' NOT NULL, matchType BOOLEAN DEFAULT TRUE )
+
+CREATE TABLE allMatches (userName VARCHAR(50) NOT NULL, matchName VARCHAR(50) NOT NULL, chat VARCHAR(10000) DEFAULT 'Empty' NOT NULL, PRIMARY KEY (userName, matchName))
+
+CREATE TABLE allRejects(userName VARCHAR(50) NOT NULL, rejectName VARCHAR(50) NOT NULL, PRIMARY KEY (userName, rejectName))
+
+CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
+ALTER USER SA SET LOCAL TRUE
+SET DATABASE DEFAULT INITIAL SCHEMA PUBLIC
+GRANT DBA TO SA
+SET WRITE_DELAY 20
+SET FILES SCALE 32
+SET SCHEMA PUBLIC
+
+INSERT INTO allUsers (userName, password, bio, interest1, interest2, interest3, interest4, matchType) VALUES('Person1','password1','A basic User Bio','skiing','coffee','beer','wine', TRUE)
+INSERT INTO allUsers (userName, password, bio, interest1, interest2, interest3, interest4, matchType) VALUES('Frank','Ocean','A tornado flew around my room','Music','rnb','beer','wine', FALSE)
+INSERT INTO allUsers (userName, password, bio, interest1, interest2, interest3, interest4, matchType) VALUES('Sally','sallypass','I love gold','Music','Sports','Gaming','Reading', TRUE)
+INSERT INTO allMatches (userName,matchName) VALUES ('Person1','Sally')
+INSERT INTO allRejects (userName,rejectName) VALUES ('Frank', 'Sally')
+

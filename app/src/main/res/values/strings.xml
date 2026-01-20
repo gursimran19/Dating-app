@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Pioneers</string>
+    <string name="title_activity_user_login">UserLogin</string>
+    <string name="title_activity_user_login.java">UserLogin.java</string>
+</resources>

@@ -1,0 +1,6 @@
+Login Successful
+Error loading user data
+Invalid Credentials
+Please enter a username and password
+Registration Successful!
+Username already exists or Registration failed
