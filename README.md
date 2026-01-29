@@ -4,7 +4,7 @@
 To create an android social connections app, where users can find and connect with other like minded people to chat and connect
 
 ## Project Demo
-Video Demo: https://youtu.be/your-video-link
+Video Demo: https://drive.google.com/file/d/1EXCwQyWaMjuK1GssMlxTF0qeqXi352s_/view?usp=drive_link
 
 
 #### To run
