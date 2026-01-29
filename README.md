@@ -3,6 +3,10 @@
 ### Project Purpose
 To create an android social connections app, where users can find and connect with other like minded people to chat and connect
 
+## Project Demo
+Video Demo: https://youtu.be/your-video-link
+
+
 #### To run
 - Load APK file onto device, or clone repository into android studio
 - Open app on device, or click run in android studio
